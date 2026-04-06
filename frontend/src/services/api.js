@@ -12,8 +12,11 @@ const api = axios.create({
 // Books & Bundles
 export const getBooks = () => api.get('/books');
 export const getBooksByClass = (className) => api.get(`/books/class/${className}`);
+export const createBook = (bookData) => api.post('/books', bookData);
+
 export const getBundles = () => api.get('/books/bundles');
 export const getBundlesByClass = (className) => api.get(`/books/bundles/class/${className}`);
+export const createBundle = (bundleData) => api.post('/books/bundles', bundleData);
 
 // Sales
 export const createSale = (saleData) => api.post('/sales', saleData);
